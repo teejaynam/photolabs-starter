@@ -3,12 +3,16 @@ import React, { useState } from 'react';
 import FavIcon from './FavIcon';
 import '../styles/PhotoFavButton.scss';
 
-function PhotoFavButton({ isLiked, onLike, onUnlike }) {
-  const handleClick = () => {
+function PhotoFavButton({ isLiked, onLike, onUnlike, onClick }) {
+  const handleClick = (e) => {
+    e.stopPropagation();
     if (isLiked) {
       onUnlike();
     } else {
       onLike();
+    }
+    if (onClick) {
+      onClick();
     }
   };
 
