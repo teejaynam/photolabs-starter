@@ -8,7 +8,7 @@ import photos from "../mocks/photos.js"
 const HomeRoute = (props) => {
   const {openModal, likedPhotos, onLikePhoto, onUnlikePhoto} = props;
 
-  const isFavPhotoExist = likedPhotos.length > 0 ? true : false;
+  const isFavPhotoExist = likedPhotos.length > 0;
 
   return (
     <div className="home-route">
