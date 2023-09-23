@@ -5,7 +5,7 @@ import TopNavigationBar from 'components/TopNavigationBar';
 import useApplicationData from 'hooks/useApplicationData';
 
 const HomeRoute = (props) => {
-  const {openModal, likedPhotos, onLikePhoto, onUnlikePhoto, photos, topics} = useApplicationData();
+  const {openModal, likedPhotos, onLikePhoto, onUnlikePhoto, photos, topics} = props;
 
   const isFavPhotoExist = likedPhotos.length > 0;
 
