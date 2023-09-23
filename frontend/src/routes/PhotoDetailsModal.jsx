@@ -6,7 +6,7 @@ import PhotoFavButton from 'components/PhotoFavButton';
 import PhotoList from 'components/PhotoList';
 
 const PhotoDetailsModal = ( props ) => {
-  const {closeModal, photo, photos, likedPhotos, onLikePhoto, onUnlikePhoto } = props;
+  const {closeModal, photo, photos, likedPhotos, onLikePhoto, onUnlikePhoto, openModal } = props;
   const selectedPhoto = photos.find((item) => item.id === photo);
   const {similar_photos} = selectedPhoto;
 
@@ -69,6 +69,7 @@ const PhotoDetailsModal = ( props ) => {
                 likedPhotos={likedPhotos}
                 onLikePhoto={onLikePhoto}
                 onUnlikePhoto={onUnlikePhoto}
+                openModal={openModal}
               />
             ))}
           </>
