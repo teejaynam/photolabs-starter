@@ -8,7 +8,7 @@ const PhotoList = (props) => {
 
   return (
     <ul className="photo-list">
-      {props.photos.map((photo) => (
+      {photos.map((photo) => (
         <PhotoListItem
         key={photo.id}
         id={photo.id}
