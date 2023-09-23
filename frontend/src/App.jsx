@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import './App.scss';
 import HomeRoute from 'routes/HomeRoute';
 import PhotoDetailsModal from 'routes/PhotoDetailsModal';
-import photos from 'mocks/photos';
 import useApplicationData from './hooks/useApplicationData';
 
 
@@ -15,6 +14,7 @@ const App = () => {
     likedPhotos,
     handleLikePhoto,
     handleUnlikePhoto,
+    photos
   } = useApplicationData();
 
 
@@ -24,7 +24,8 @@ const App = () => {
         openModal={openModal}
         likedPhotos={likedPhotos} 
         onLikePhoto={handleLikePhoto} 
-        onUnlikePhoto={handleUnlikePhoto} 
+        onUnlikePhoto={handleUnlikePhoto}
+        photos={photos} 
       />
       {isModalOpen && (
         <PhotoDetailsModal 
