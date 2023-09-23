@@ -14,7 +14,8 @@ const App = () => {
     likedPhotos,
     handleLikePhoto,
     handleUnlikePhoto,
-    photos
+    photos,
+    topics
   } = useApplicationData();
 
 
@@ -26,6 +27,7 @@ const App = () => {
         onLikePhoto={handleLikePhoto} 
         onUnlikePhoto={handleUnlikePhoto}
         photos={photos} 
+        topics={topics}
       />
       {isModalOpen && (
         <PhotoDetailsModal 
