@@ -3,34 +3,20 @@ import './App.scss';
 import HomeRoute from 'routes/HomeRoute';
 import PhotoDetailsModal from 'routes/PhotoDetailsModal';
 import photos from 'mocks/photos';
+import useApplicationData from './hooks/useApplicationData';
 
 
 const App = () => {
-  const [isModalOpen, setModalOpen] = useState(false);
-  const [selectedPhoto, setSelectedPhoto] = useState(null);
-  const [likedPhotos, setLikedPhotos] = useState([]);
+  const {
+    isModalOpen,
+    openModal,
+    closeModal,
+    selectedPhoto,
+    likedPhotos,
+    handleLikePhoto,
+    handleUnlikePhoto,
+  } = useApplicationData();
 
-
-  const openModal = (photo) => {
-    setSelectedPhoto(photo);
-    setModalOpen(true);
-  }
-
-  const closeModal = () => {
-    setSelectedPhoto(null);
-    setModalOpen(false);
-  }
-
-  const handleLikePhoto = (photoId) => {
-    if (!likedPhotos.includes(photoId)) {
-      setLikedPhotos([...likedPhotos, photoId]);
-    }
-  };
-
-  const handleUnlikePhoto = (photoId) => {
-    const updatedLikedPhotos = likedPhotos.filter((id) => id !== photoId);
-    setLikedPhotos(updatedLikedPhotos);
-  };
 
   return (
     <div className="App">
