@@ -1,18 +1,17 @@
 import React from 'react';
-
 import '../styles/HomeRoute.scss';
 import PhotoList from 'components/PhotoList';
 import TopNavigationBar from 'components/TopNavigationBar';
-import photos from "../mocks/photos.js"
+import useApplicationData from 'hooks/useApplicationData';
 
 const HomeRoute = (props) => {
-  const {openModal, likedPhotos, onLikePhoto, onUnlikePhoto} = props;
+  const {openModal, likedPhotos, onLikePhoto, onUnlikePhoto, photos, topics} = useApplicationData();
 
   const isFavPhotoExist = likedPhotos.length > 0;
 
   return (
     <div className="home-route">
-      <TopNavigationBar isFavPhotoExist={isFavPhotoExist}/>
+      <TopNavigationBar isFavPhotoExist={isFavPhotoExist} topics={topics}/>
       <PhotoList
         photos={photos}
         likedPhotos={likedPhotos}
