@@ -37,6 +37,7 @@ const App = () => {
           likedPhotos={likedPhotos}
           onLikePhoto={handleLikePhoto} 
           onUnlikePhoto={handleUnlikePhoto} 
+          openModal={openModal}
         />
       )}
     </div>
