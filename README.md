@@ -1,5 +1,5 @@
-# PHOTOLABS!!! 📷
-Simple Instagram clone webpage that uses server side rendering to display photos and topics and fetches photos from an API based on specified topics!
+# PHOTOLABS!!! 📷🌟💫
+Simple Instagram clone webpage that uses server side rendering to display photos and topics and can fetch photos from an API, when you click on a topic!
 
 # Photolabs
 
