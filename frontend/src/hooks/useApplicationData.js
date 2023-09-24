@@ -1,9 +1,8 @@
 import React, {useReducer, useEffect} from 'react';
-//import photos from "../mocks/photos.js"
-import topics from "../mocks/topics.js"
 
 const apiURLPhotos = 'http://localhost:8001/api/photos'
 const apiURLTopics = 'http://localhost:8001/api/topics'
+const apiURLPhotosByTopic = 'http://localhost:8001/api/topics/photos'
 
 
 const initialState = {
@@ -63,6 +62,14 @@ const useApplicationData = () => {
       .then((data) => {dispatch({ type: 'SET_TOPIC_DATA', payload: data})})
   }, [])
 
+  const fetchPhotosByTopic = (topicId) => {
+    fetch(`${apiURLPhotosByTopic}/${topicId}`) 
+    .then((res) => res.json())
+    .then((data) => {
+      dispatch({ type: actionTypes.SET_PHOTO_DATA, payload: data });
+    });
+  }
+
   const openModal = (photo) => {
     dispatch({ type: actionTypes.OPEN_MODAL, payload: photo });
   };
@@ -85,6 +92,7 @@ const useApplicationData = () => {
     closeModal,
     handleLikePhoto,
     handleUnlikePhoto,
+    fetchPhotosByTopic
   };
 };
 
