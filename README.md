@@ -1,5 +1,5 @@
-# react-photolabs
-The PhotoLabs project for the Web Development React course programming.
+# PHOTOLABS!!! 📷
+Simple Instagram clone webpage that uses server side rendering to display photos and topics and fetches photos from an API based on specified topics!
 
 # Photolabs
 
@@ -22,3 +22,9 @@ Read `backend/readme` for further setup details.
 cd backend
 npm start
 ```
+
+## Screenshots!
+
+!["Screen shot of front page"](https://github.com/teejaynam/photolabs-starter/blob/main/docs/front-page.PNG)
+
+!["Screen shot of modal view"](https://github.com/teejaynam/photolabs-starter/blob/main/docs/modal-view.PNG)
